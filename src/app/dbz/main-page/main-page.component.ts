@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
 
 @Component({
@@ -21,6 +21,10 @@ export class MainPageComponent {
   nuevo: Personaje = {
     nombre: 'Maestro Roshi',
     poder: 1000
+  }
+
+  agregarNuevoPersonaje( argumento: Personaje ) {
+    this.personajes.push( argumento );
   }
 
 }
